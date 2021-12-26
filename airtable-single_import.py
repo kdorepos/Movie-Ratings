@@ -1,5 +1,6 @@
 # imports
 import argparse
+import sys
 import requests
 import json
 import re
@@ -9,18 +10,9 @@ import csv
 omdb_apiKey = '4bc136e0'
 
 # parsing arguments
-parser = argparse.ArgumentParser(
-    description='Parsing arguments for movie tracking'
-)
-parser.add_argument('-m', '--movie-name', metavar='movie_name', required=True)
-parser.add_argument('-y', '--year', metavar='year', required=True)
-parser.add_argument('-r', '--rating', metavar='rating', required=True)
-args = parser.parse_args()
-
-# setting vars from arguments
-movieInput = args.movie_name
-movieYear = args.year
-myRating = args.rating
+movieInput = sys.argv[1]
+movieYear = sys.argv[2]
+myRating = sys.argv[3]
 
 # cleaning up arguments, prepping for OMDB processing
 myRating = str(myRating)
