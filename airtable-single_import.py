@@ -10,9 +10,9 @@ import csv
 omdb_apiKey = '4bc136e0'
 
 # parsing arguments
-movieInput = sys.argv[0]
-movieYear = sys.argv[1]
-myRating = sys.argv[2]
+movieInput = sys.argv[1]
+movieYear = sys.argv[2]
+myRating = sys.argv[3]
 
 # cleaning up arguments, prepping for OMDB processing
 myRating = str(myRating)
